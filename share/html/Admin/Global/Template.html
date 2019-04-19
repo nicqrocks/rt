@@ -58,13 +58,22 @@
 
 %# hang onto the queue id
 <input type="hidden" class="hidden" name="Queue" value="<%$Queue%>" />
-<& /Admin/Elements/ModifyTemplate,
-    Name        => $TemplateObj->Name // $ARGS{Name},
-    Description => $TemplateObj->Description // $ARGS{Description},
-    Content     => $TemplateObj->Content // $ARGS{Content},
-    Type        => $TemplateObj->Type // $ARGS{Type},
-&>
-<& /Elements/Submit, Label => $SubmitLabel, Reset => 1 &>
+<div class="col-md-12">
+  <div class="form-row">
+    <& /Admin/Elements/ModifyTemplate,
+      Name        => $TemplateObj->Name // $ARGS{Name},
+      Description => $TemplateObj->Description // $ARGS{Description},
+      Content     => $TemplateObj->Content // $ARGS{Content},
+      Type        => $TemplateObj->Type // $ARGS{Type},
+    &>
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="col-md-12">
+    <& /Elements/Submit, Label => $SubmitLabel, Reset => 1 &>
+  </div>
+</div>
 </form>
 
 
