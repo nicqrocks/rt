@@ -52,7 +52,11 @@
 <br />
 % for my $pane (@panes) {
 <&|/Widgets/TitleBox, title => loc('Dashboards in menu'), bodyclass => "" &>
-<& /Widgets/SelectionBox:show, self => $pane &></&>
+<div class="form-row">
+  <div class="col-md-12">
+    <& /Widgets/SelectionBox:show, self => $pane &></&>
+  </div>
+</div>
 <br />
 % }
 <%init>
