@@ -110,9 +110,9 @@ $available_rights{$_} = loc( $available_rights{$_} ) for keys %available_rights;
       </ul>
 % for my $category (sort { $catsort{$a} <=> $catsort{$b} } keys %categories) {
     <div id="<% "$id-$category" %>" class="col-md-12">
-    <ul class="rights-list">
+    <ul class="rights-list list-group">
 %     for my $right (sort { $available_rights{$a} cmp $available_rights{$b} } @{$categories{$category}}) {
-        <li>
+        <li class="list-item">
           <div class="custom-control custom-checkbox">
             <input
               type="checkbox"

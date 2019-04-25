@@ -52,8 +52,14 @@
   <form method="post" action="GroupRights.html" id="ModifyGroupRights" name="ModifyGroupRights">
     <input type="hidden" class="hidden" name="id" value="<% $CustomFieldObj->id %>" />
 
-    <& /Admin/Elements/EditRights, Context => $CustomFieldObj, Principals => \@principals &>
-    <& /Elements/Submit, Label => loc('Save Changes') &>
+    <div class="form-row">
+      <& /Admin/Elements/EditRights, Context => $CustomFieldObj, Principals => \@principals &>
+    </div>
+    <div class="form-row">
+      <div class="col-md-12">
+        <& /Elements/Submit, Label => loc('Save Changes') &>
+      </div>
+    </div>
   </form>
 
 <%INIT>
