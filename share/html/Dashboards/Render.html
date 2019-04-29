@@ -68,25 +68,25 @@
 
 % $m->callback(CallbackName => 'BeforeTable', Dashboard => $Dashboard, show_cb => $show_cb);
 
-<table class="dashboard" id="dashboard-<%$id%>">
+<div class="col-md-12 dashboard" id="dashboard-<%$id%>">
 
 % $m->callback(CallbackName => 'BeforePanes', Dashboard => $Dashboard, show_cb => $show_cb);
 
-<tr valign="top">
+  <div class="form-row">
 
-<td class="boxcontainer">
+    <div class="col-md-12">
 % $show_cb->('body');
-</td>
+    </div>
 
-<td class="boxcontainer">
+    <div class="col-md-12">
 % $show_cb->('sidebar');
-</td>
+    </div>
 
-</tr>
+  </div>
 
 % $m->callback(CallbackName => 'AfterPanes', Dashboard => $Dashboard, show_cb => $show_cb);
 
-</table>
+</div>
 
 % $m->callback(CallbackName => 'AfterTable', Dashboard => $Dashboard, show_cb => $show_cb);
 

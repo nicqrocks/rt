@@ -1,0 +1,37 @@
+<& /Elements/Header, Title => $title &>
+<& /Elements/Tabs &>
+
+<& /Elements/ListActions, actions => \@results &>
+
+<div class="form-row">
+  <div class="custom-control custom-radio">
+    <input class="custom-control-input" type="radio" id="Frequency-weekly" name="Frequency" value="weekly"></input>
+    <label class="custom-control-label" for="Frequency-weekly">
+      weekly, on
+    </label>
+  </div>
+  <select class="selectpicker" name="Dow">
+    <option value="Monday"</option>
+    <option value="Tuesday"</option>
+    <option value="Wednesday"</option>
+    <option value="Thursday"</option>
+    <option value="Friday"</option>
+    <option value="Saturday"</option>
+    <option value="Sunday"</option>
+  </select>
+  <label class="label">
+    every
+  </label>
+  <select name="Fow" class="form-control selectpicker">
+    <option value="test"</option>
+  </select>
+  <label class="label">
+    weeks
+  </label>
+  </div>
+</div>
+
+<%ARGS>
+$title       => 'tets'
+@results    => undef
+</%ARGS>
